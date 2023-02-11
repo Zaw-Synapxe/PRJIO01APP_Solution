@@ -9,15 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.ConsoleApp", "Ca
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{E13CB618-B06E-41AC-8898-EA85EF7AF93A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDoList.API", "ToDoList.API\ToDoList.API.csproj", "{250FDB9D-8426-4474-854B-066F5BD7EB38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList.API", "ToDoList.API\ToDoList.API.csproj", "{250FDB9D-8426-4474-854B-066F5BD7EB38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatGPT.APIClient.ConsoleApp", "ChatGPT.APIClient.ConsoleApp\ChatGPT.APIClient.ConsoleApp.csproj", "{153E02B1-03D0-4792-8891-F0AB4D5020DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatGPT.APIClient.ConsoleApp", "ChatGPT.APIClient.ConsoleApp\ChatGPT.APIClient.ConsoleApp.csproj", "{153E02B1-03D0-4792-8891-F0AB4D5020DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubbleSort.ConsoleApp", "BubbleSort.ConsoleApp\BubbleSort.ConsoleApp.csproj", "{B5BDB697-7C40-4C27-8617-4729A31B188B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubbleSort.ConsoleApp", "BubbleSort.ConsoleApp\BubbleSort.ConsoleApp.csproj", "{B5BDB697-7C40-4C27-8617-4729A31B188B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericsBasics.ConsoleApp", "GenericsBasics.ConsoleApp\GenericsBasics.ConsoleApp.csproj", "{F3A81DC2-87F5-4340-B023-9AA7BC41DD69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericsBasics.ConsoleApp", "GenericsBasics.ConsoleApp\GenericsBasics.ConsoleApp.csproj", "{F3A81DC2-87F5-4340-B023-9AA7BC41DD69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThermostatEvents.ConsoleApp", "ThermostatEvents.ConsoleApp\ThermostatEvents.ConsoleApp.csproj", "{49D917C2-4368-43F8-BB53-965BF9033A4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThermostatEvents.ConsoleApp", "ThermostatEvents.ConsoleApp\ThermostatEvents.ConsoleApp.csproj", "{49D917C2-4368-43F8-BB53-965BF9033A4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateBasic.ConsoleApp", "DelegateBasic.ConsoleApp\DelegateBasic.ConsoleApp.csproj", "{1AF2D425-C4D5-43EA-9BE2-94233DFA29F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{49D917C2-4368-43F8-BB53-965BF9033A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49D917C2-4368-43F8-BB53-965BF9033A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49D917C2-4368-43F8-BB53-965BF9033A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF2D425-C4D5-43EA-9BE2-94233DFA29F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF2D425-C4D5-43EA-9BE2-94233DFA29F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF2D425-C4D5-43EA-9BE2-94233DFA29F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF2D425-C4D5-43EA-9BE2-94233DFA29F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{B5BDB697-7C40-4C27-8617-4729A31B188B} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 		{F3A81DC2-87F5-4340-B023-9AA7BC41DD69} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 		{49D917C2-4368-43F8-BB53-965BF9033A4A} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{1AF2D425-C4D5-43EA-9BE2-94233DFA29F6} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}
