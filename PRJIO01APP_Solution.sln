@@ -19,17 +19,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericsBasics.ConsoleApp",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThermostatEvents.ConsoleApp", "ThermostatEvents.ConsoleApp\ThermostatEvents.ConsoleApp.csproj", "{49D917C2-4368-43F8-BB53-965BF9033A4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateBasic.ConsoleApp", "DelegateBasic.ConsoleApp\DelegateBasic.ConsoleApp.csproj", "{1AF2D425-C4D5-43EA-9BE2-94233DFA29F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegateBasic.ConsoleApp", "DelegateBasic.ConsoleApp\DelegateBasic.ConsoleApp.csproj", "{1AF2D425-C4D5-43EA-9BE2-94233DFA29F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InheritanceExample.ConsoleApp", "InheritanceExample.ConsoleApp\InheritanceExample.ConsoleApp.csproj", "{2404CF20-B2BE-44F4-844A-1EA55AE9A416}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InheritanceExample.ConsoleApp", "InheritanceExample.ConsoleApp\InheritanceExample.ConsoleApp.csproj", "{2404CF20-B2BE-44F4-844A-1EA55AE9A416}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumExamples.ConsoleApp", "EnumExamples.ConsoleApp\EnumExamples.ConsoleApp.csproj", "{8ECD9841-DB93-433C-A67D-F6A4BB5C2AE7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnumExamples.ConsoleApp", "EnumExamples.ConsoleApp\EnumExamples.ConsoleApp.csproj", "{8ECD9841-DB93-433C-A67D-F6A4BB5C2AE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringExamples.ConsoleApp", "StringExamples.ConsoleApp\StringExamples.ConsoleApp.csproj", "{878BF9A3-9A61-4CCD-8FA1-BEF065E67250}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringExamples.ConsoleApp", "StringExamples.ConsoleApp\StringExamples.ConsoleApp.csproj", "{878BF9A3-9A61-4CCD-8FA1-BEF065E67250}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayExamples.ConsoleApp", "ArrayExamples.ConsoleApp\ArrayExamples.ConsoleApp.csproj", "{ADD63C5A-CBBA-4433-A098-8912DDC29F17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArrayExamples.ConsoleApp", "ArrayExamples.ConsoleApp\ArrayExamples.ConsoleApp.csproj", "{ADD63C5A-CBBA-4433-A098-8912DDC29F17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopExamples.ConsoleApp", "LoopExamples.ConsoleApp\LoopExamples.ConsoleApp.csproj", "{85DAD497-B1B8-4604-A978-BDE8972DDE2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopExamples.ConsoleApp", "LoopExamples.ConsoleApp\LoopExamples.ConsoleApp.csproj", "{85DAD497-B1B8-4604-A978-BDE8972DDE2C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LINQQueries.ConsoleApp", "LINQQueries.ConsoleApp\LINQQueries.ConsoleApp.csproj", "{11A95755-1691-4F5D-B088-D785ACAC82BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharp.ConsoleApp", "RestSharp.ConsoleApp\RestSharp.ConsoleApp.csproj", "{D9CDAA31-CD00-42D7-B8A3-BD38FE1B7C6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +89,14 @@ Global
 		{85DAD497-B1B8-4604-A978-BDE8972DDE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85DAD497-B1B8-4604-A978-BDE8972DDE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85DAD497-B1B8-4604-A978-BDE8972DDE2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11A95755-1691-4F5D-B088-D785ACAC82BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11A95755-1691-4F5D-B088-D785ACAC82BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11A95755-1691-4F5D-B088-D785ACAC82BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11A95755-1691-4F5D-B088-D785ACAC82BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9CDAA31-CD00-42D7-B8A3-BD38FE1B7C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9CDAA31-CD00-42D7-B8A3-BD38FE1B7C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9CDAA31-CD00-42D7-B8A3-BD38FE1B7C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9CDAA31-CD00-42D7-B8A3-BD38FE1B7C6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +114,8 @@ Global
 		{878BF9A3-9A61-4CCD-8FA1-BEF065E67250} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 		{ADD63C5A-CBBA-4433-A098-8912DDC29F17} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 		{85DAD497-B1B8-4604-A978-BDE8972DDE2C} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{11A95755-1691-4F5D-B088-D785ACAC82BF} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{D9CDAA31-CD00-42D7-B8A3-BD38FE1B7C6F} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}
