@@ -59,6 +59,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Handfire.API", "Handfire.AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dummie.ConsoleApp", "Dummie.ConsoleApp\Dummie.ConsoleApp.csproj", "{7E6AD939-6A48-4C13-B405-F9D4CE7F3594}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecuringWithKey.API", "SecuringWithKey.API\SecuringWithKey.API.csproj", "{85699E30-707B-4B93-B532-B15A17C459F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{7E6AD939-6A48-4C13-B405-F9D4CE7F3594}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E6AD939-6A48-4C13-B405-F9D4CE7F3594}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E6AD939-6A48-4C13-B405-F9D4CE7F3594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85699E30-707B-4B93-B532-B15A17C459F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85699E30-707B-4B93-B532-B15A17C459F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85699E30-707B-4B93-B532-B15A17C459F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85699E30-707B-4B93-B532-B15A17C459F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -195,6 +201,7 @@ Global
 		{9B942D45-EE66-4988-AC12-5C135BF64FB2} = {FD24F3B5-0805-44E5-A510-F3748702C2D8}
 		{82D8020F-9DEF-452A-90DA-09882D694F77} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
 		{7E6AD939-6A48-4C13-B405-F9D4CE7F3594} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{85699E30-707B-4B93-B532-B15A17C459F1} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}
