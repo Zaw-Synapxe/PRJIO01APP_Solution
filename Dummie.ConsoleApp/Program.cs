@@ -86,7 +86,7 @@ void MovieDetails(int id)
 {
     Console.Clear();
 
-    Movie? movie = movieService.Get(id);
+    Movie movie = movieService.Get(id);
 
     Console.WriteLine(movie?.Title);
     Console.WriteLine($"The rating of this movie is {movie?.Rating}");
@@ -101,7 +101,7 @@ void CreateMovie()
 {
     Console.Clear();
     Console.WriteLine("Enter a title of a movie: ");
-    string? title = Console.ReadLine();
+    string title = Console.ReadLine();
 
     if (string.IsNullOrEmpty(title))
         title = "Unknown movie";

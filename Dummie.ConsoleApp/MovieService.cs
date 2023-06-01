@@ -22,7 +22,7 @@ namespace Dummie.ConsoleApp
             return _movies.OrderBy(x => x.Title);
         }
 
-        public Movie? Get(int id)
+        public Movie Get(int id)
         {
             return _movies?.SingleOrDefault(x => x.Id == id);
         }
@@ -38,7 +38,7 @@ namespace Dummie.ConsoleApp
 
         public void Delete(int id)
         {
-            Movie? toDelete = Get(id);
+            Movie toDelete = Get(id);
 
             if (toDelete != null)
                 _movies.Remove(toDelete);
