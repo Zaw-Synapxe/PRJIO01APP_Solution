@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dummie.ConsoleApp", "Dummie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecuringWithKey.API", "SecuringWithKey.API\SecuringWithKey.API.csproj", "{85699E30-707B-4B93-B532-B15A17C459F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.API", "Auth.API\Auth.API.csproj", "{D402EFD5-5F14-4AF5-87DB-A04DE45BBA28}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -171,6 +173,10 @@ Global
 		{85699E30-707B-4B93-B532-B15A17C459F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85699E30-707B-4B93-B532-B15A17C459F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85699E30-707B-4B93-B532-B15A17C459F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D402EFD5-5F14-4AF5-87DB-A04DE45BBA28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D402EFD5-5F14-4AF5-87DB-A04DE45BBA28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D402EFD5-5F14-4AF5-87DB-A04DE45BBA28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D402EFD5-5F14-4AF5-87DB-A04DE45BBA28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -202,6 +208,7 @@ Global
 		{82D8020F-9DEF-452A-90DA-09882D694F77} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
 		{7E6AD939-6A48-4C13-B405-F9D4CE7F3594} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 		{85699E30-707B-4B93-B532-B15A17C459F1} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
+		{D402EFD5-5F14-4AF5-87DB-A04DE45BBA28} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}
