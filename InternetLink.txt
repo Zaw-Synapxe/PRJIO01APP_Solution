@@ -1,0 +1,57 @@
+
+
+Clean Architecture with .NET and .NET Core — Overview
+https://medium.com/dotnet-hub/clean-architecture-with-dotnet-and-dotnet-core-aspnetcore-overview-introduction-getting-started-ec922e53bb97
+
+Clean Architecture In ASP.NET Core Web API
+https://www.c-sharpcorner.com/article/clean-architecture-in-asp-net-core-web-api/
+
+
+CleanArchitectureDemo
+Building ASP.NET Core Apps with Clean Architecture - Demo Project for a blog post available at 
+https://www.ezzylearning.net/tutorial/building-asp-net-core-apps-with-clean-architecture
+https://www.ezzylearning.net/tutorial/a-guide-for-building-software-with-clean-architecture
+
+
+
+
+
+
+
+Organizing the Project Structure
+In a Clean Architecture-based project, the codebase is typically organized into four main layers: Domain, Application, Infrastructure, and Presentation. Each layer has a specific purpose and contains different types of code.
+
+Domain Layer
+The Domain layer is the core of the application. It contains the business logic and rules that define the behavior of the system. This layer should be independent of any external dependencies and frameworks. It should only contain pure business logic and data structures.
+
+The Domain layer should define the entities, value objects, and domain services that represent the core concepts of the application. It should also define the interfaces for any external dependencies that the application needs to interact with, such as databases or external APIs.
+
+Application Layer
+The Application layer is responsible for coordinating the interactions between the Domain layer and the Infrastructure layer. It contains the use cases and application services that define the high-level behavior of the system.
+
+The Application layer should not contain any business logic. Instead, it should delegate to the Domain layer to perform the necessary operations. The Application layer should also define the interfaces for any external dependencies that the system needs to interact with.
+
+Infrastructure Layer
+The Infrastructure layer is responsible for providing the implementation details for the interfaces defined in the Domain and Application layers. It contains the code that interacts with external dependencies such as databases, file systems, and external APIs.
+
+The Infrastructure layer should be designed to be easily replaceable. This means that the code should be decoupled from any specific implementation details, such as the choice of database or web framework.
+
+Presentation Layer
+The Presentation layer is responsible for handling the user interface and user input. It contains the code that handles HTTP requests, renders HTML templates, and interacts with JavaScript on the client side.
+
+The Presentation layer should be designed to be easily replaceable. This means that the code should be decoupled from any specific web framework or front-end library.
+
+By organizing the codebase into these four layers, we can achieve a high degree of modularity and maintainability. Each layer has a specific purpose and responsibility, and changes in one layer should not affect the others.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -52,6 +52,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseHttpsRedirection();
 
+// hangfire
 var options = new DashboardOptions()
 {
     Authorization = new[] { new MyAuthorizationFilter() }

@@ -26,6 +26,18 @@ namespace EnumExamples.ConsoleApp
         Max
     }
 
+    // Define an enum called "DaysOfTheWeek" with seven members
+    public enum DaysOfTheWeek
+    {
+        Sunday,
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday
+    }
+
     class Program
     {
         public static void ProcessMonthlyExpenditureData(Month month)
@@ -90,6 +102,42 @@ namespace EnumExamples.ConsoleApp
             OutputReport(ReportType.Average, months, reportData);
             OutputReport(ReportType.Min, months, reportData);
             OutputReport(ReportType.Max, months, reportData);
+
+            // // Define an enum called "DaysOfTheWeek" with seven members
+            // Declare a variable of type "DaysOfTheWeek" and assign it the value "Sunday"
+            DaysOfTheWeek today = DaysOfTheWeek.Sunday;
+
+            // Print the value of the "today" variable
+            Console.WriteLine(today); // Output: "Sunday"
+
+            // Compare the value of the "today" variable to the value of the "DaysOfTheWeek.Friday" member
+            if (today == DaysOfTheWeek.Friday)
+            {
+                Console.WriteLine("It's Friday!");
+            }
+            else
+            {
+                Console.WriteLine("It's not Friday.");
+            }
+
+
+            //
+            switch (today)
+            {
+                case DaysOfTheWeek.Sunday:
+                    Console.WriteLine("It's Sunday.");
+                    break;
+                case DaysOfTheWeek.Monday:
+                    Console.WriteLine("It's Monday.");
+                    break;
+                // Add cases for the other days of the week
+                default:
+                    Console.WriteLine("It's not a day of the week.");
+                    break;
+            }
+
+
+            // // Define an enum called "DaysOfTheWeek" with seven members
 
             Console.ReadKey();
         }
