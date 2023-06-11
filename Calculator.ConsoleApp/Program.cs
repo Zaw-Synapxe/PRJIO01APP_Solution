@@ -77,6 +77,7 @@ namespace Calculator.ConloseApp
 
                 try
                 {
+                    await Task.Delay(TimeSpan.FromSeconds(0.5));
                     return Convert.ToDouble(input);
                 }
                 catch (FormatException)
