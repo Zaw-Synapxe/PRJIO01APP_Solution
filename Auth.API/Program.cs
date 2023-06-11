@@ -44,7 +44,28 @@ builder.Services.AddTransient<IAuthService, AuthService>();
 
 //
 // AddCors
-//
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllCors", config =>
+    {
+        //
+        if (builder.Environment.IsDevelopment())
+        {
+            config.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
+        }
+        else
+        {
+            config.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+
+            //config.WithOrigins(builder.Configuration["AllowedOriginsList"]);
+            //config.WithMethods(builder.Configuration["AllowedMethodsList"]);
+            //config.WithHeaders(builder.Configuration["AllowedHeadersList"]);
+        }
+        //
+    });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -65,6 +86,8 @@ app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseCors("AllowAllCors");
 
 app.MapControllers();
 
