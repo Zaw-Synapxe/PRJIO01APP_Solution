@@ -130,23 +130,95 @@
 
 
 
+            //
+            List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+            var evenNumbers = from num in numbers
+                              where num % 2 == 0
+                              select num;
+            var evenNumberStrings = from num in numbers
+                                    where num % 2 == 0
+                                    select num.ToString();
+
+
+            //
+            List<Person> persons = new List<Person>
+            {
+                new Person { Name = "Alice", Age = 25, City = "New York" },
+                new Person { Name = "Bob", Age = 30, City = "Los Angeles" },
+                new Person { Name = "Charlie", Age = 20, City = "San Francisco" },
+                new Person { Name = "David", Age = 35, City = "New York" },
+            };
+
+            var newYorkers = from person in persons
+                             where person.City == "New York"
+                             select person;
+
+            foreach (var person in newYorkers)
+            {
+                Console.WriteLine("{0}, {1}", person.Name, person.Age);
+            }
+
+
+            //
+            List<Order> orders = new List<Order>
+            {
+                new Order { OrderId = 1, CustomerId = 1, Total = 100.00m },
+                new Order { OrderId = 2, CustomerId = 2, Total = 200.00m },
+                new Order { OrderId = 3, CustomerId = 1, Total = 50.00m },
+                new Order { OrderId = 4, CustomerId = 3, Total = 150.00m },
+                new Order { OrderId = 5, CustomerId = 2, Total = 75.00m },
+                new Order { OrderId = 6, CustomerId = 1, Total = 300.00m },
+                new Order { OrderId = 7, CustomerId = 3, Total = 125.00m },
+            };
+
+            var customerAverages = orders
+                .GroupBy(order => order.CustomerId)
+                .Select(group => new
+                {
+                    CustomerId = group.Key,
+                    AverageTotal = group.Average(order => order.Total)
+                })
+                .OrderByDescending(result => result.AverageTotal);
+
+            foreach (var result in customerAverages)
+            {
+                Console.WriteLine($"Customer {result.CustomerId} has an average order total of {result.AverageTotal:C}");
+            }
+
+
+            // C# LINQ full join
+            List<int> list1 = new List<int> { 1, 2, 3 };
+            List<int> list2 = new List<int> { 2, 3, 4 };
+
+            var fullOuterJoin = list1
+                .SelectMany(x => list2.DefaultIfEmpty(),
+                    (x, y) => new { Left = x, Right = y })
+                .Where(xy => xy.Left == xy.Right || xy.Right == 0 || xy.Left == 0)
+                .Select(xy => new { Value = xy.Left == 0 ? xy.Right : xy.Left });
+
+            foreach (var item in fullOuterJoin)
+            {
+                Console.WriteLine(item.Value);
+            }
+
+            // C# LINQ distinct
+            int[] distnumbers = { 1, 2, 3, 3, 4, 5, 5, 6 };
+            var distinctNumbers = distnumbers.Distinct();
+            foreach (var number in distinctNumbers)
+            {
+                Console.WriteLine(number);
+            }
+
+            // LINQ Aggregating Lists
+            List<int> numbersA = new List<int> { 1, 2, 3, 4, 5 };
+            int sum = numbersA.Aggregate((acc, x) => acc + x);
+            //or
+            int sum2 = numbersA.Sum();
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+            //
         }
     }
 
@@ -164,4 +236,21 @@
         public int StandardID { get; set; }
         public string StandardName { get; set; }
     }
+
+    public class Person
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string City { get; set; }
+    }
+
+    public class Order
+    {
+        public int OrderId { get; set; }
+        public int CustomerId { get; set; }
+        public decimal Total { get; set; }
+    }
+
+
+    //
 }
