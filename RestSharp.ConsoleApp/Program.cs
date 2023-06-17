@@ -61,9 +61,31 @@ public class Program
 
 
 
+        // POST
+        //var request = new RestRequest("products", Method.POST);
+        //request.AddJsonBody(newProduct);
+        //var response = client.Execute(request);
+
+        // GET
+        //var request = new RestRequest("products/{id}", Method.GET);
+        //request.AddUrlSegment("id", productId.ToString());
+        //var response = client.Execute<Product>(request);
+        //var product = response.Data;
+
+        //// PUT
+        //var request = new RestRequest("products/{id}", Method.PUT);
+        //request.AddUrlSegment("id", productId.ToString());
+        //request.AddJsonBody(updatedProduct);
+        //var response = client.Execute(request);
+
+        // DELETE
+        //var request = new RestRequest("products/{id}", Method.DELETE);
+        //request.AddUrlSegment("id", productId.ToString());
+        //var response = client.Execute(request);
 
 
 
+        //
     }
 
     public class Product
