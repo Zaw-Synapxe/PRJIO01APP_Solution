@@ -1,0 +1,25 @@
+Infrastructure.Persistence
+- Infrastructure.Persistence.MySQL
+- Infrastructure.Persistence.MongoDB
+Infrastructure.Identity
+
+Persistence layer contains:
+
+Data Context
+Repositories
+Data Seeding
+Data Migrations
+Caching (Distributed, In-Memory)
+
+
+Infrastructure layer contains:
+
+Identity Services
+File Storage Services
+Queue Storage Services
+Message Bus Services
+Payment Services
+Third-party Services
+Notifications
+- Email Service
+- Sms Service

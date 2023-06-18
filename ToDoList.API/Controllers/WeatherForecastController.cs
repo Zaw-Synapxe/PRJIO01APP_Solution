@@ -22,7 +22,10 @@ namespace ToDoList.API.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             //_logger.LogInformation("Today was so sunny!!");
-            _logger.LogWarning("Message From WeatherForecast ...");
+            _logger.LogInformation("Message From WeatherForecast ...");
+
+
+
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -32,5 +35,8 @@ namespace ToDoList.API.Controllers
             })
             .ToArray();
         }
+
+
+
     }
 }

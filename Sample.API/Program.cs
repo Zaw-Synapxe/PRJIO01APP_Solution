@@ -24,10 +24,10 @@ app.UseHttpsRedirection();
 
 //app.UseSession(); // UseSession must be called here.
 
+app.UseAuthorization();
+
 // Add HTTP security headers in ASP.NET Core using custom middleware
 app.UseMiddleware<SecurityHeadersMiddleware>();
-
-app.UseAuthorization();
 
 app.MapControllers();
 

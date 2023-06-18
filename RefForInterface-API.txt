@@ -1,0 +1,6 @@
+User Interface layer contains:
+
+Controllers
+Middlewares
+Filters/Attributes
+API Utilities
