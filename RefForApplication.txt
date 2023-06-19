@@ -9,3 +9,18 @@ Mappers
 Validators
 Behaviors
 Specifications
+
+
+Abstractions,
+Contracts,
+Ports
+Interfaces
+Business Services
+Commands and Queries
+Application Exceptions
+DTOs
+Request and Response Models
+Domain Entities to DTOs mappers
+Validators
+Behaviors
+Specifications

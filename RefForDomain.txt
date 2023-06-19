@@ -1,8 +1,8 @@
 Domain layer contains:
 
-Entities
+Entities (Domain Entities)
 Aggregates
 Value Objects
 Domain Events
-Enums
+Enums (Enumerations)
 Constants

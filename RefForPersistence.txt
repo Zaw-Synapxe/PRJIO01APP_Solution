@@ -1,0 +1,8 @@
+Persistence Layer
+
+Data Context
+Repositories
+Data Migrations
+Data Seeding
+In Memory Caching
+Distributed Caching e.g. Redis, Memcached, etc.

@@ -6,3 +6,18 @@ View Models
 Middlewares
 Filters/Attributes
 Web/API Utilities
+
+
+Presentation Layer
+
+Web Pages
+Web Components
+Web APIs
+Controllers
+Views
+Middleware
+Filters
+Attributes
+View Models,
+Style Sheets
+Java Script Files
