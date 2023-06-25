@@ -8,14 +8,14 @@ namespace StringExamples.ConsoleApp
         {
 
             //Defining and Initialising strings
-            string string1;
-            string string2 = null;
-            string string3 = String.Empty;
-            string string4 = "C:\\Development\\Projects";
-            string string5 = @"C:\Development\Projects";
-            String string6 = "Latest string";
-            var string7 = "Implicit string";
-            const string string8 = "This text cannot be changed at runtime.";
+            //string string1;
+            //string string2 = null;
+            //string string3 = String.Empty;
+            //string string4 = "C:\\Development\\Projects";
+            //string string5 = @"C:\Development\Projects";
+            //String string6 = "Latest string";
+            //var string7 = "Implicit string";
+            //const string string8 = "This text cannot be changed at runtime.";
 
             char[] charArray = new char[] { 'H', 'e', 'l', 'l', 'o' };
             string string9 = new string(charArray);

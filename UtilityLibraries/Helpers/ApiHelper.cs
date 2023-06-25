@@ -1,0 +1,195 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http.Headers;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using UtilityLibraries.Exceptions;
+using Newtonsoft.Json;
+
+namespace UtilityLibraries.Helpers
+{
+    public class ApiHelper
+    {
+        private HttpClient apiClient;
+        /// <summary>
+        /// Constructor for Api Helper
+        /// </summary>
+        /// <param name="baseAddress"></param>
+        public ApiHelper(string baseAddress)
+        {
+            InitializeClient(baseAddress);
+        }
+        /// <summary>
+        /// Initialize Api Client with baseAddress
+        /// </summary>
+        /// <param name="baseAddress"></param>
+        private void InitializeClient(string baseAddress)
+        {
+            apiClient = new HttpClient();
+            apiClient.BaseAddress = new Uri(baseAddress);
+            apiClient.DefaultRequestHeaders.Accept.Clear();
+            apiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+        }
+        /// <summary>
+        /// Add JWT Bearer Token to HttpClient Authorization Header
+        /// </summary>
+        /// <param name="jwtToken"></param>
+        public void AddJwtAuthorization(string jwtToken)
+        {
+            if (!string.IsNullOrEmpty(jwtToken))
+            {
+                apiClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
+            }
+        }
+        /// <summary>
+        /// Removes the previously set JWT Bearer Token from the HttpClient Header
+        /// </summary>
+        public void RemoveJwtAuthorization()
+        {
+            apiClient.DefaultRequestHeaders.Remove("Authorization");
+        }
+
+        private readonly int maxRetryAttempts = 3;
+
+        private TimeSpan pauseBetweenFailures = TimeSpan.FromSeconds(5);
+        public async Task<T> GetAsync<T>(string endPointUrl)
+        {
+            var response = new HttpResponseMessage();
+            RetryOnException(maxRetryAttempts, pauseBetweenFailures, async () =>
+            {
+                response = await apiClient.GetAsync(endPointUrl);
+            });
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsAsync<T>();
+            }
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            {
+                throw new UnauthorizedException();
+            }
+            if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                throw new NotFoundException();
+            }
+            if (response.StatusCode == HttpStatusCode.Forbidden)
+            {
+                throw new UnauthorizedException();
+            }
+            else
+            {
+                throw new Exception("Exception!");
+            }
+        }
+
+        public async Task<T> PostAsync<T>(string endPointUrl, object data)
+        {
+            var json = JsonConvert.SerializeObject(data);
+            var payload = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = new HttpResponseMessage();
+            RetryOnException(maxRetryAttempts, pauseBetweenFailures, async () =>
+            {
+                response = await apiClient.PostAsync(endPointUrl, payload);
+            });
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsAsync<T>();
+            }
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            {
+                throw new UnauthorizedException();
+            }
+            if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                throw new NotFoundException();
+            }
+            if (response.StatusCode == HttpStatusCode.Forbidden)
+            {
+                throw new UnauthorizedException();
+            }
+            else
+            {
+                throw new Exception("Exception!");
+            }
+        }
+
+        public async Task<T> DeleteAsync<T>(string endPointUrl)
+        {
+            var response = new HttpResponseMessage();
+            RetryOnException(maxRetryAttempts, pauseBetweenFailures, async () =>
+            {
+                response = await apiClient.DeleteAsync(endPointUrl);
+            });
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsAsync<T>();
+            }
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            {
+                throw new UnauthorizedException();
+            }
+            if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                throw new NotFoundException();
+            }
+            if (response.StatusCode == HttpStatusCode.Forbidden)
+            {
+                throw new UnauthorizedException();
+            }
+            else
+            {
+                throw new Exception("Exception!");
+            }
+        }
+
+        public async Task<T> PutAsync<T>(string endPointUrl, object data)
+        {
+            var json = JsonConvert.SerializeObject(data);
+            var payload = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = new HttpResponseMessage();
+            RetryOnException(maxRetryAttempts, pauseBetweenFailures, async () =>
+            {
+                response = await apiClient.PutAsync(endPointUrl, payload);
+            });
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsAsync<T>();
+            }
+            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            {
+                throw new UnauthorizedException();
+            }
+            if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                throw new NotFoundException();
+            }
+            if (response.StatusCode == HttpStatusCode.Forbidden)
+            {
+                throw new UnauthorizedException();
+            }
+            else
+            {
+                throw new Exception("Exception!");
+            }
+        }
+
+        private void RetryOnException(int times, TimeSpan delay, Action operation)
+        {
+            var attempts = 0;
+            do
+            {
+                try
+                {
+                    attempts++;
+                    operation();
+                    break; // Sucess! Lets exit the loop!
+                }
+                catch (Exception)
+                {
+                    Task.Delay(delay).Wait();
+                }
+            } while (attempts <= times);
+        }
+    }
+}
