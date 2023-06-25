@@ -1,25 +1,24 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Application.Interfaces.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using ToDoList.Application.Interfaces.Repositories;
-using ToDoList.Persistence.Contexts;
-using ToDoList.Persistence.Repositories;
+using Persistence.Contexts;
+using Persistence.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace ToDoList.Persistence.Extensions
+namespace Persistence.Extensions
 {
     public static class IServiceCollectionExtensions
     {
         public static void AddPersistenceLayer(this IServiceCollection services, IConfiguration configuration)
         {
-            //services.AddMappings();
             services.AddDbContext(configuration);
             services.AddRepositories();
         }
-
-        //private static void AddMappings(this IServiceCollection services)
-        //{
-        //    services.AddAutoMapper(Assembly.GetExecutingAssembly());
-        //}
 
         public static void AddDbContext(this IServiceCollection services, IConfiguration configuration)
         {
@@ -35,16 +34,20 @@ namespace ToDoList.Persistence.Extensions
 
         private static void AddRepositories(this IServiceCollection services)
         {
-            services
-                .AddTransient(typeof(IUnitOfWork), typeof(UnitOfWork))
-                .AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>))
-                .AddTransient<IPlayerRepository, PlayerRepository>()
-                .AddTransient<IClubRepository, ClubRepository>()
-                .AddTransient<IStadiumRepository, StadiumRepository>()
-                .AddTransient<ICountryRepository, CountryRepository>();
+            // ------------------------------
+            #region Repositories
+            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddTransient<IDeveloperRepository, DeveloperRepository>();
+            services.AddTransient<IProjectRepository, ProjectRepository>();
+            #endregion
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            //
         }
 
         //
-    }
 
+
+
+    }
 }
