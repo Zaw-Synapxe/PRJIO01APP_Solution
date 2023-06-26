@@ -151,6 +151,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.Applicaion", "Invoi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevPrj.API", "DevPrj.API\DevPrj.API.csproj", "{DA9E1603-21E4-48DE-A46E-9CF0783DB607}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatatableServerSide.WebAppRazor", "DatatableServerSide.WebAppRazor\DatatableServerSide.WebAppRazor.csproj", "{B35F41B6-447B-4566-84B8-260E2FEFD808}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -369,6 +371,10 @@ Global
 		{DA9E1603-21E4-48DE-A46E-9CF0783DB607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA9E1603-21E4-48DE-A46E-9CF0783DB607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA9E1603-21E4-48DE-A46E-9CF0783DB607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B35F41B6-447B-4566-84B8-260E2FEFD808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B35F41B6-447B-4566-84B8-260E2FEFD808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B35F41B6-447B-4566-84B8-260E2FEFD808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B35F41B6-447B-4566-84B8-260E2FEFD808}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -427,6 +433,7 @@ Global
 		{F198D088-6F9B-4645-80CF-05E7171A188B} = {E5FA789E-196F-4734-91F4-0A3F37D40917}
 		{D53279C6-7F84-4463-B94A-4A00FDCB603B} = {E5FA789E-196F-4734-91F4-0A3F37D40917}
 		{DA9E1603-21E4-48DE-A46E-9CF0783DB607} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
+		{B35F41B6-447B-4566-84B8-260E2FEFD808} = {FD24F3B5-0805-44E5-A510-F3748702C2D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}
