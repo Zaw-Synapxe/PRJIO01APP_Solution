@@ -10,6 +10,6 @@ namespace Application.Interfaces.Repositories
     {
         IDeveloperRepository Developers { get; }
         IProjectRepository Projects { get; }
-        int Complete();
+        Task<int> CompleteAsync();
     }
 }

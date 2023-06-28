@@ -1,4 +1,6 @@
 ﻿using Application.Interfaces.Repositories;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Persistence.Contexts;
 using System;
 using System.Collections.Generic;
@@ -12,34 +14,40 @@ namespace Persistence.Repositories
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         protected readonly ApplicationDbContext _context;
+
         public GenericRepository(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public void Add(T entity)
+        public async Task<bool> AddAsync(T entity)
         {
-            _context.Set<T>().Add(entity);
+            //entity.CreateDate = DateTime.Now;
+
+            //_context.Set<T>().Add(entity);
+            EntityEntry<T> added = await _context.Set<T>().AddAsync(entity);
+            return added != null ? true : false;
         }
 
-        public void AddRange(IEnumerable<T> entities)
+        public async Task<bool> AddRangeAsync(IEnumerable<T> entities)
         {
-            _context.Set<T>().AddRange(entities);
+            await _context.Set<T>().AddRangeAsync(entities);
+            return true;
         }
 
-        public IEnumerable<T> Find(Expression<Func<T, bool>> expression)
+        public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> expression)
         {
-            return _context.Set<T>().Where(expression);
+            return await _context.Set<T>().Where(expression).ToListAsync();
         }
 
-        public IEnumerable<T> GetAll()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
-            return _context.Set<T>().ToList();
+            return await _context.Set<T>().ToListAsync();
         }
 
-        public T GetById(int id)
+        public async Task<T> GetByIdAsync(int id)
         {
-            return _context.Set<T>().Find(id);
+            return await _context.Set<T>().FindAsync(id);
         }
 
         public void Remove(T entity)

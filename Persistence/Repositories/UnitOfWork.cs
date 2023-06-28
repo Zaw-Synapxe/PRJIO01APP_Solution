@@ -17,15 +17,20 @@ namespace Persistence.Repositories
             Developers = new DeveloperRepository(_context);
             Projects = new ProjectRepository(_context);
         }
+
         public IDeveloperRepository Developers { get; private set; }
         public IProjectRepository Projects { get; private set; }
-        public int Complete()
+
+
+        public async Task<int> CompleteAsync()
         {
-            return _context.SaveChanges();
+            return await _context.SaveChangesAsync();
         }
+
         public void Dispose()
         {
             _context.Dispose();
+            //_context.DisposeAsync();
         }
     }
 }

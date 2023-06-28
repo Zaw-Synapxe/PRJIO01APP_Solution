@@ -14,14 +14,15 @@ namespace DevPrj.API.Controllers
         {
             _unitOfWork = unitOfWork;
         }
-        public IActionResult GetPopularDevelopers([FromQuery] int count)
+        public async Task<IActionResult> GetPopularDevelopers([FromQuery] int count)
         {
-            var popularDevelopers = _unitOfWork.Developers.GetPopularDevelopers(count);
+            var popularDevelopers = await _unitOfWork.Developers.GetPopularDevelopers(count);
             return Ok(popularDevelopers);
 
         }
+
         [HttpPost]
-        public IActionResult AddDeveloperAndProject()
+        public async Task<IActionResult> AddDeveloperAndProject()
         {
             var developer = new Developer
             {
@@ -32,11 +33,20 @@ namespace DevPrj.API.Controllers
             {
                 Name = "codewithmukesh"
             };
-            _unitOfWork.Developers.Add(developer);
-            _unitOfWork.Projects.Add(project);
-            _unitOfWork.Complete();
+
+            var resultD = await _unitOfWork.Developers.AddAsync(developer);
+            var resultP = await _unitOfWork.Projects.AddAsync(project);
+            await _unitOfWork.CompleteAsync();
+
             return Ok();
 
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var result = await _unitOfWork.Developers.GetAllAsync();
+            return Ok(result);
         }
 
         //

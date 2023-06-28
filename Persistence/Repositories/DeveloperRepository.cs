@@ -1,11 +1,7 @@
 ﻿using Application.Interfaces.Repositories;
 using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Persistence.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistence.Repositories
 {
@@ -14,9 +10,11 @@ namespace Persistence.Repositories
         public DeveloperRepository(ApplicationDbContext context) : base(context)
         {
         }
-        public IEnumerable<Developer> GetPopularDevelopers(int count)
+        public async Task<IEnumerable<Developer>> GetPopularDevelopers(int count)
         {
-            return _context.Developers.OrderByDescending(d => d.Followers).Take(count).ToList();
+            return await _context.Developers.OrderByDescending(d => d.Followers).Take(count).ToListAsync();
         }
+
+        //
     }
 }
