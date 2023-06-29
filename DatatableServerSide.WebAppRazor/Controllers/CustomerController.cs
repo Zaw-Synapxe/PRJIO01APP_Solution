@@ -34,12 +34,6 @@ namespace DatatableServerSide.WebAppRazor.Controllers
 
                 var customerData = (from tempcustomer in context.tbl_Customers select tempcustomer);
 
-                ////sort data
-                //if (!(string.IsNullOrEmpty(sortColumn) && string.IsNullOrEmpty(sortColumnDirection)))
-                //{
-                //    customerData = customerData.OrderBy(sortColumn + " " + sortColumnDirection);
-                //}
-
                 // search data when search value found
                 if (!string.IsNullOrEmpty(searchValue))
                 {
@@ -47,6 +41,12 @@ namespace DatatableServerSide.WebAppRazor.Controllers
                                                 || m.LastName.Contains(searchValue)
                                                 || m.Contact.Contains(searchValue)
                                                 || m.Email.Contains(searchValue));
+                }
+
+                //sort data
+                if (!(string.IsNullOrEmpty(sortColumn) && string.IsNullOrEmpty(sortColumnDirection)))
+                {
+                    ////customerData = customerData.OrderBy(sortColumn + " " + sortColumnDirection);
                 }
 
                 //get total count of data in table
