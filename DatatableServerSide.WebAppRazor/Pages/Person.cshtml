@@ -1,4 +1,30 @@
 ﻿@page
 @model DatatableServerSide.WebAppRazor.Pages.PersonModel
 @{
+    ViewData["Title"] = "Person page";
+}
+
+
+<link href="~/lib/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br />
+    <div style="width:90%; margin:0 auto;">
+        <table id="personDatatable" class="table table-striped table-bordered dt-responsive nowrap" width="100%" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script src="~/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/lib/datatables/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/js/person.js" asp-append-version="true"></script>
 }

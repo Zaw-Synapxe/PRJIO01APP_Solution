@@ -5,6 +5,14 @@
     {
       "library": "datatables@1.10.21",
       "destination": "wwwroot/lib/datatables/"
+    },
+    {
+      "library": "datatables-buttons@2.3.6",
+      "destination": "wwwroot/lib/",
+      "files": [
+        "js/dataTables.buttons.min.js",
+        "js/dataTables.buttons.js"
+      ]
     }
   ]
 }
