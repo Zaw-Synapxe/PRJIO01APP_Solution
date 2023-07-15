@@ -1,3 +1,4 @@
+using JwtWeb.API.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JwtWeb.API.Controllers

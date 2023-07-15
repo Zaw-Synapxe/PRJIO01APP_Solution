@@ -11,6 +11,7 @@ namespace DatatableServerSide.WebAppRazor.Data
         }
         public DbSet<Customer> tbl_Customers { get; set; }
         public DbSet<Person> tbl_Persons { get; set; }
+        public DbSet<TestRegister> tbl_TestRegisters { get; set; }
 
     }
 }

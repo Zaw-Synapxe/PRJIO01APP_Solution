@@ -29,7 +29,7 @@ var builder = WebApplication.CreateBuilder(args);
 ////builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 //////
 
-builder.Services.AddPersistenceLayer(builder.Configuration);
+//////////builder.Services.AddPersistenceLayer(builder.Configuration);
 
 //
 

@@ -84,7 +84,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.UseAuthentication();
+app.UseAuthentication(); // jwt
 app.UseAuthorization();
 
 app.UseCors("AllowAllCors");

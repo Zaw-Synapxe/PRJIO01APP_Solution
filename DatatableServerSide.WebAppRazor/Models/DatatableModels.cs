@@ -2,6 +2,9 @@
 
 namespace DatatableServerSide.WebAppRazor.Models
 {
+    /// <summary>
+    /// DTModels
+    /// </summary>
     public class DatatableModels
     {
 

@@ -146,15 +146,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{3F884F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToDoList.Shared", "ToDoList.Shared\ToDoList.Shared.csproj", "{9A77CC7D-065A-46A6-A7BF-06EA4EF8D063}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{F198D088-6F9B-4645-80CF-05E7171A188B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{F198D088-6F9B-4645-80CF-05E7171A188B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoice.Applicaion", "Invoice.Applicaion\Invoice.Applicaion.csproj", "{D53279C6-7F84-4463-B94A-4A00FDCB603B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invoice.Applicaion", "Invoice.Applicaion\Invoice.Applicaion.csproj", "{D53279C6-7F84-4463-B94A-4A00FDCB603B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevPrj.API", "DevPrj.API\DevPrj.API.csproj", "{DA9E1603-21E4-48DE-A46E-9CF0783DB607}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevPrj.API", "DevPrj.API\DevPrj.API.csproj", "{DA9E1603-21E4-48DE-A46E-9CF0783DB607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatatableServerSide.WebAppRazor", "DatatableServerSide.WebAppRazor\DatatableServerSide.WebAppRazor.csproj", "{B35F41B6-447B-4566-84B8-260E2FEFD808}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatatableServerSide.WebAppRazor", "DatatableServerSide.WebAppRazor\DatatableServerSide.WebAppRazor.csproj", "{B35F41B6-447B-4566-84B8-260E2FEFD808}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence.DP", "Persistence.DP\Persistence.DP.csproj", "{BB5A5A4D-728D-4A6C-9D6E-C7DBE61669C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence.DP", "Persistence.DP\Persistence.DP.csproj", "{BB5A5A4D-728D-4A6C-9D6E-C7DBE61669C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRSMediatR.API", "CQRSMediatR.API\CQRSMediatR.API.csproj", "{E4CD1308-0D06-4E1E-945A-257ADAB5389E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatGPT.UnitTest.ConsoleApp", "ChatGPT.UnitTest.ConsoleApp\ChatGPT.UnitTest.ConsoleApp.csproj", "{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -382,6 +386,14 @@ Global
 		{BB5A5A4D-728D-4A6C-9D6E-C7DBE61669C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5A5A4D-728D-4A6C-9D6E-C7DBE61669C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB5A5A4D-728D-4A6C-9D6E-C7DBE61669C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4CD1308-0D06-4E1E-945A-257ADAB5389E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4CD1308-0D06-4E1E-945A-257ADAB5389E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4CD1308-0D06-4E1E-945A-257ADAB5389E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4CD1308-0D06-4E1E-945A-257ADAB5389E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -442,6 +454,8 @@ Global
 		{DA9E1603-21E4-48DE-A46E-9CF0783DB607} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
 		{B35F41B6-447B-4566-84B8-260E2FEFD808} = {FD24F3B5-0805-44E5-A510-F3748702C2D8}
 		{BB5A5A4D-728D-4A6C-9D6E-C7DBE61669C0} = {2D85F88F-53F6-483E-9C91-A84E053D124B}
+		{E4CD1308-0D06-4E1E-945A-257ADAB5389E} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
+		{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}

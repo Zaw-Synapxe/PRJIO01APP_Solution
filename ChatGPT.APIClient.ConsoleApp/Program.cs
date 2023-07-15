@@ -22,8 +22,8 @@ class Program
         if (args.Length > 0)
         {
             HttpClient client = new HttpClient();
-
-            client.DefaultRequestHeaders.Add("authorization", "Bearer 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");
+            // "Bearer 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"
+            client.DefaultRequestHeaders.Add("authorization", "Bearer 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");
 
             var content = new StringContent("{\"model\": \"text-davinci-001\", \"prompt\": \"" + args[0] + "\",\"temperature\": 1,\"max_tokens\": 100}",
                 Encoding.UTF8, "application/json");
