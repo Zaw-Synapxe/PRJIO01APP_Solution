@@ -88,6 +88,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XYZ", "XYZ", "{94A63818-A3D3-4FE4-9D17-FE36B3809375}"
 	ProjectSection(SolutionItems) = preProject
 		AuthDbContext.sql = AuthDbContext.sql
+		dp_createtables.sql = dp_createtables.sql
 		FTPClient.cs = FTPClient.cs
 		HangFireSQLScript.sql = HangFireSQLScript.sql
 		InternetLink.txt = InternetLink.txt
@@ -158,7 +159,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence.DP", "Persisten
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRSMediatR.API", "CQRSMediatR.API\CQRSMediatR.API.csproj", "{E4CD1308-0D06-4E1E-945A-257ADAB5389E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatGPT.UnitTest.ConsoleApp", "ChatGPT.UnitTest.ConsoleApp\ChatGPT.UnitTest.ConsoleApp.csproj", "{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatGPT.UnitTest.ConsoleApp", "ChatGPT.UnitTest.ConsoleApp\ChatGPT.UnitTest.ConsoleApp.csproj", "{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.ConsoleApp", "Excel.ConsoleApp\Excel.ConsoleApp.csproj", "{03B152C5-DA47-45C6-BEA7-33EC47C019EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -394,6 +397,10 @@ Global
 		{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B152C5-DA47-45C6-BEA7-33EC47C019EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B152C5-DA47-45C6-BEA7-33EC47C019EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B152C5-DA47-45C6-BEA7-33EC47C019EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B152C5-DA47-45C6-BEA7-33EC47C019EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -456,6 +463,7 @@ Global
 		{BB5A5A4D-728D-4A6C-9D6E-C7DBE61669C0} = {2D85F88F-53F6-483E-9C91-A84E053D124B}
 		{E4CD1308-0D06-4E1E-945A-257ADAB5389E} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
 		{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{03B152C5-DA47-45C6-BEA7-33EC47C019EE} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}

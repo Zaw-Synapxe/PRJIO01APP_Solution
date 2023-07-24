@@ -8,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 //
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
+
+//builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
+
 //
 
 builder.Services.AddControllers();
