@@ -2,6 +2,7 @@
 using DocumentFormat.OpenXml.Spreadsheet;
 using DocumentFormat.OpenXml.Wordprocessing;
 using Newtonsoft.Json;
+using System;
 using System.Data;
 using System.Text;
 
@@ -9,6 +10,8 @@ class Program
 {
     static void Main(string[] args)
     {
+
+
         string xSheetName = "MyTestSheet";
         List<string> xOrgColumn = new List<string>();
         List<string> xColumn = new List<string>();
@@ -26,7 +29,7 @@ class Program
             foreach (Sheet thesheet in thesheetcollection)
             {
 
-                if(xSheetName == thesheet.Name)
+                if (xSheetName == thesheet.Name)
                 {
                     excelResult.AppendLine("Excel file Orginal");
                     excelResult.AppendLine("Excel Sheet Name : " + thesheet.Name);
@@ -43,7 +46,7 @@ class Program
                             //statement to take the integer value  
                             string currentcellvalue = string.Empty;
                             if (thecurrentcell.DataType != null)
-                            {   
+                            {
                                 if (thecurrentcell.DataType == CellValues.SharedString)
                                 {
                                     int id;
@@ -130,7 +133,7 @@ class Program
                         int xfirstrow = 0;
                         foreach (Row thecurrentrow2 in thesheetdata2)
                         {
-                            if(xfirstrow == 1)
+                            if (xfirstrow == 1)
                             {
                                 // compare columns
 
@@ -147,7 +150,7 @@ class Program
                                     // exit foreach loop ...
                                     break;
                                 }
-                                
+
                             }
 
                             foreach (Cell thecurrentcell2 in thecurrentrow2)
@@ -167,12 +170,12 @@ class Program
                                                 //code to take the string value  
                                                 excelResult2.Append(item.Text.Text + " ");
 
-                                                if(xfirstrow == 0)
+                                                if (xfirstrow == 0)
                                                 {
                                                     // add to List the columns for compare
                                                     xColumn.Add(item.Text.Text.ToString());
                                                 }
-                                                
+
                                             }
                                         }
                                     }
@@ -208,26 +211,81 @@ class Program
 
 
 
-        ////////
-        ////////
-        //////// Write to Excel File
-        //////List<xDetails> xData = new List<xDetails>()
-        //////{
-        //////    new xDetails() {ColumnABC="1001", ColumnDEF="ABCD", ColumnGHI ="City1", ColumnXYZ="USA"},
-        //////    new xDetails() {ColumnABC="1002", ColumnDEF="PQRS", ColumnGHI ="City2", ColumnXYZ="INDIA"},
-        //////    new xDetails() {ColumnABC="1003", ColumnDEF="XYZZ", ColumnGHI ="City3", ColumnXYZ="CHINA"},
-        //////    new xDetails() {ColumnABC="1004", ColumnDEF="LMNO", ColumnGHI ="City4", ColumnXYZ="UK"},
-        //////};
-
-        //////// Lets converts our object data to Datatable for a simplified logic.
-        //////// Datatable is most easy way to deal with complex datatypes for easy reading and formatting. 
-        //////DataTable table = (DataTable)JsonConvert.DeserializeObject(JsonConvert.SerializeObject(xData), (typeof(DataTable)));
 
 
+       ////// Write to Excel File
+       ////// List<xDetails> xData = new List<xDetails>()
+       ////// {
+       //////     new xDetails() {ColumnABC="1001", ColumnDEF="ABCD", ColumnGHI ="City1", ColumnXYZ="USA"},
+       //////     new xDetails() {ColumnABC="1002", ColumnDEF="PQRS", ColumnGHI ="City2", ColumnXYZ="INDIA"},
+       //////     new xDetails() {ColumnABC="1003", ColumnDEF="XYZZ", ColumnGHI ="City3", ColumnXYZ="CHINA"},
+       //////     new xDetails() {ColumnABC="1004", ColumnDEF="LMNO", ColumnGHI ="City4", ColumnXYZ="UK"},
+       ////// };
 
-        ////////
-        //////Console.Read();
+       ////// Lets converts our object data to Datatable for a simplified logic.
+       ////// Datatable is most easy way to deal with complex datatypes for easy reading and formatting.
 
+       //////DataTable table = (DataTable)JsonConvert.DeserializeObject(JsonConvert.SerializeObject(xData), (typeof(DataTable)));
+
+
+
+
+        Console.Read();
+
+
+
+        //////////// ----------------------------------------------
+        ////////var json = @"
+        ////////[
+        ////////        { make: ""Chevy"", model: ""2500"",  location: ""lot""},
+        ////////        { make: ""Ford"", model: ""Edge"",  location: ""lot""},
+        ////////        { make: ""Chevy"", model: ""1500"",  location: ""lot""},
+        ////////        { make: ""Chevy"", model: ""Econoline"",  location: ""back lot""},
+        ////////        { make: ""GMC"", model: ""Acadia"",  location: ""back lot""},
+        ////////        { make: ""GMC"", model: ""Terrain"",  location: ""in transit""},
+        ////////        { make: ""Chevy"", model: ""Cruze"",  location: ""in transit""},
+        ////////        { make: ""Ford"", model: ""F150"",  location: ""ordered""}
+        ////////    ]";
+        ////////    var structure = new[] { new { make = "", model = "", location = "" } };
+        ////////var data = JsonConvert.DeserializeAnonymousType(json, structure).ToArray();
+        ////////var tree = data.GroupBy(x => x.make)
+        ////////    .Select(g => new
+        ////////    {
+        ////////        text = g.Key,
+        ////////        nodes = g.GroupBy(xx => xx.location)
+        ////////                 .Select(gg => new
+        ////////                 {
+        ////////                     text = gg.Key,
+        ////////                     nodes = gg.Select(xxx => new { text = xxx.model })
+        ////////                 })
+        ////////                 .ToArray()
+        ////////    }).ToArray();
+        ////////Console.WriteLine(JsonConvert.SerializeObject(tree, Formatting.Indented));
+        ////////Console.ReadLine();
+
+
+        ////////var weatherForecast = new WeatherForecast
+        ////////{
+        ////////    Date = DateTime.Parse("2019-08-01"),
+        ////////    TemperatureCelsius = 25,
+        ////////    Summary = "Hot",
+        ////////    SummaryField = "Hot",
+        ////////    DatesAvailable = new List<DateTimeOffset>()
+        ////////            { DateTime.Parse("2019-08-01"), DateTime.Parse("2019-08-02") },
+        ////////    TemperatureRanges = new Dictionary<string, HighLowTemps>
+        ////////    {
+        ////////        ["Cold"] = new HighLowTemps { High = 20, Low = -10 },
+        ////////        ["Hot"] = new HighLowTemps { High = 60, Low = 20 }
+        ////////    },
+        ////////    SummaryWords = new[] { "Cool", "Windy", "Humid" }
+        ////////};
+
+        ////////string jsonString = JsonConvert.SerializeObject(weatherForecast, Formatting.Indented);
+
+        ////////Console.WriteLine(jsonString);
+        ////////Console.ReadLine();
+
+        //////////// -------------------------------------------------------------
     }
 
 }
@@ -241,3 +299,21 @@ class Program
 //////    public string ColumnXYZ { get; set; }
 
 //////}
+
+
+////////public class WeatherForecast
+////////{
+////////    public DateTimeOffset Date { get; set; }
+////////    public int TemperatureCelsius { get; set; }
+////////    public string Summary { get; set; }
+////////    public string SummaryField;
+////////    public IList<DateTimeOffset> DatesAvailable { get; set; }
+////////    public Dictionary<string, HighLowTemps> TemperatureRanges { get; set; }
+////////    public string[] SummaryWords { get; set; }
+////////}
+
+////////public class HighLowTemps
+////////{
+////////    public int High { get; set; }
+////////    public int Low { get; set; }
+////////}

@@ -5,17 +5,26 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DatatableServerSide.WebAppRazor.Controllers
 {
+    /// <summary>
+    ///   <br />
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class PersonController : ControllerBase
     {
         private readonly ApplicationDbContext context;
 
+        /// <summary>Initializes a new instance of the <see cref="PersonController" /> class.</summary>
+        /// <param name="context">The context.</param>
         public PersonController(ApplicationDbContext context)
         {
             this.context = context;
         }
 
+        /// <summary>Loads the table.</summary>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         [HttpPost]
         public IActionResult GetPersons()
         {

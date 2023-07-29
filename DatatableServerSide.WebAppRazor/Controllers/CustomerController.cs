@@ -3,11 +3,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DatatableServerSide.WebAppRazor.Controllers
 {
+    /// <summary>
+    ///   <br />
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
     {
         private readonly ApplicationDbContext context;
+
+        /// <summary>Initializes a new instance of the <see cref="CustomerController" /> class.</summary>
+        /// <param name="context">The context.</param>
         public CustomerController(ApplicationDbContext context)
         {
             this.context = context;
@@ -16,6 +22,10 @@ namespace DatatableServerSide.WebAppRazor.Controllers
         // Database with some Sample Data
         // https://www.mockaroo.com/
 
+        /// <summary>Loads the table.</summary>
+        /// <returns>
+        ///   <br />
+        /// </returns>
         [HttpPost]
         public IActionResult GetCustomers()
         {
