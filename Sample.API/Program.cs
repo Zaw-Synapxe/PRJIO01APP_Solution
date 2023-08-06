@@ -1,7 +1,11 @@
 using Sample.API.Middleware;
 using Sample.API.Services;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.ClearProviders();
+builder.Logging.AddLog4Net();
 
 // Add services to the container.
 builder.Services.AddScoped<ProductsRepository>();

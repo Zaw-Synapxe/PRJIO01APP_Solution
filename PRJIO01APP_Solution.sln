@@ -161,9 +161,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CQRSMediatR.API", "CQRSMedi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatGPT.UnitTest.ConsoleApp", "ChatGPT.UnitTest.ConsoleApp\ChatGPT.UnitTest.ConsoleApp.csproj", "{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel.ConsoleApp", "Excel.ConsoleApp\Excel.ConsoleApp.csproj", "{03B152C5-DA47-45C6-BEA7-33EC47C019EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Excel.ConsoleApp", "Excel.ConsoleApp\Excel.ConsoleApp.csproj", "{03B152C5-DA47-45C6-BEA7-33EC47C019EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4net.ConsoleApp", "Log4net.ConsoleApp\Log4net.ConsoleApp.csproj", "{A4F685DD-80CD-475D-8244-459BA499F479}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log4net.ConsoleApp", "Log4net.ConsoleApp\Log4net.ConsoleApp.csproj", "{A4F685DD-80CD-475D-8244-459BA499F479}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeekAndDays.ConsoleApp", "WeekAndDays.ConsoleApp\WeekAndDays.ConsoleApp.csproj", "{A6F2315B-2031-45DF-A4DB-F996538AEBC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeekAndDays2.ConsoleApp", "WeekAndDays2.ConsoleApp\WeekAndDays2.ConsoleApp.csproj", "{2FA60374-F464-499E-B5AA-8ED35CD4B098}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -407,6 +411,14 @@ Global
 		{A4F685DD-80CD-475D-8244-459BA499F479}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4F685DD-80CD-475D-8244-459BA499F479}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4F685DD-80CD-475D-8244-459BA499F479}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6F2315B-2031-45DF-A4DB-F996538AEBC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6F2315B-2031-45DF-A4DB-F996538AEBC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6F2315B-2031-45DF-A4DB-F996538AEBC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6F2315B-2031-45DF-A4DB-F996538AEBC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA60374-F464-499E-B5AA-8ED35CD4B098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA60374-F464-499E-B5AA-8ED35CD4B098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA60374-F464-499E-B5AA-8ED35CD4B098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA60374-F464-499E-B5AA-8ED35CD4B098}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -471,6 +483,8 @@ Global
 		{1F235FF6-C81E-4224-B345-A7D4D3CFA4CC} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 		{03B152C5-DA47-45C6-BEA7-33EC47C019EE} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 		{A4F685DD-80CD-475D-8244-459BA499F479} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{A6F2315B-2031-45DF-A4DB-F996538AEBC8} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{2FA60374-F464-499E-B5AA-8ED35CD4B098} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}
