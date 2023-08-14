@@ -137,12 +137,61 @@ namespace Dapper.ConsoleApp
 
         public async Task<List<Company>> GetCompaniesEmployeesMultipleMapping()
         {
-            throw new NotImplementedException();
+            var query = "SELECT * FROM Companies c JOIN Employees e ON c.Id = e.CompanyId";
+
+            using (var connection = _context.CreateConnection())
+            {
+                var companyDict = new Dictionary<int, Company>();
+
+                var companies = await connection.QueryAsync<Company, Employee, Company>(
+                    query, (company, employee) =>
+                    {
+                        if (!companyDict.TryGetValue(company.Id, out var currentCompany))
+                        {
+                            currentCompany = company;
+                            companyDict.Add(currentCompany.Id, currentCompany);
+                        }
+                        if (currentCompany.Employees is not null) 
+                        {
+                            currentCompany.Employees.Add(employee);
+                        }
+                        else
+                        {
+                            currentCompany!.Employees = new List<Employee>();
+                        }
+                        
+                        return currentCompany;
+                    }
+                );
+
+                return companies.Distinct().ToList();
+            }
         }
 
         public async Task CreateMultipleCompanies(List<CompanyForCreationDto> companies)
         {
-            throw new NotImplementedException();
+            var query = "INSERT INTO Companies (Name, Address, Country) VALUES (@Name, @Address, @Country)";
+
+            using (var connection = _context.CreateConnection())
+            {
+                connection.Open();
+
+                using (var transaction = connection.BeginTransaction())
+                {
+                    foreach (var company in companies)
+                    {
+                        var parameters = new DynamicParameters();
+                        parameters.Add("Name", company.Name, DbType.String);
+                        parameters.Add("Address", company.Address, DbType.String);
+                        parameters.Add("Country", company.Country, DbType.String);
+
+                        await connection.ExecuteAsync(query, parameters, transaction: transaction);
+                        //throw new Exception();
+                    }
+
+                    transaction.Commit();
+                }
+            }
         }
 
 
