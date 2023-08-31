@@ -12,4 +12,16 @@
     <PackageReference Include="Open-XML-SDK" Version="2.9.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="testdataX.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testdata.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="testdataorg.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
