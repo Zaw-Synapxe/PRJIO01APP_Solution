@@ -173,11 +173,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeekAndDays2.ConsoleApp", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dapper.ConsoleApp", "Dapper.ConsoleApp\Dapper.ConsoleApp.csproj", "{79801531-A501-45F1-B7AA-C0F7D5B8861F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4Net.LogUtility", "Log4Net.LogUtility\Log4Net.LogUtility.csproj", "{58EC60E2-0E88-48F5-8128-7B06FFAA38CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log4Net.LogUtility", "Log4Net.LogUtility\Log4Net.LogUtility.csproj", "{58EC60E2-0E88-48F5-8128-7B06FFAA38CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FtpClient.WinSCPUtility", "FtpClient.WinSCPUtility\FtpClient.WinSCPUtility.csproj", "{71BC0B74-8198-41C7-8D59-73E3F011E858}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FtpClient.WinSCPUtility", "FtpClient.WinSCPUtility\FtpClient.WinSCPUtility.csproj", "{71BC0B74-8198-41C7-8D59-73E3F011E858}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QRCodeGenerate.ConsoleApp", "QRCodeGenerate.ConsoleApp\QRCodeGenerate.ConsoleApp.csproj", "{6D9A7F1B-B534-45D1-80DB-7F2141AF21E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QRCodeGenerate.ConsoleApp", "QRCodeGenerate.ConsoleApp\QRCodeGenerate.ConsoleApp.csproj", "{6D9A7F1B-B534-45D1-80DB-7F2141AF21E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentEmailImp.WebApp", "FluentEmailImp.WebApp\FluentEmailImp.WebApp.csproj", "{7DC98D0B-72EE-445D-A95C-EBA5A323770E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -445,6 +447,10 @@ Global
 		{6D9A7F1B-B534-45D1-80DB-7F2141AF21E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D9A7F1B-B534-45D1-80DB-7F2141AF21E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D9A7F1B-B534-45D1-80DB-7F2141AF21E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC98D0B-72EE-445D-A95C-EBA5A323770E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC98D0B-72EE-445D-A95C-EBA5A323770E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC98D0B-72EE-445D-A95C-EBA5A323770E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC98D0B-72EE-445D-A95C-EBA5A323770E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -515,6 +521,7 @@ Global
 		{58EC60E2-0E88-48F5-8128-7B06FFAA38CF} = {CFB0A404-0B46-492C-80A7-E1F33E8AB9C2}
 		{71BC0B74-8198-41C7-8D59-73E3F011E858} = {CFB0A404-0B46-492C-80A7-E1F33E8AB9C2}
 		{6D9A7F1B-B534-45D1-80DB-7F2141AF21E7} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{7DC98D0B-72EE-445D-A95C-EBA5A323770E} = {FD24F3B5-0805-44E5-A510-F3748702C2D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}

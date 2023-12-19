@@ -67,6 +67,7 @@ var options = new HiveMQClientOptions
 };
 */
 
+//// -----------------------
 //The HiveMQ MQTT C# Client can be instantiated with smart defaults as simply as:
 var client = new HiveMQClient(options);
 
@@ -79,6 +80,7 @@ else
     Console.WriteLine($"Connecting to {options.Host} on port {options.Port} without TLS...");
 }
 
+// -----------------------
 // Connect
 HiveMQtt.Client.Results.ConnectResult connectResult;
 try
@@ -106,6 +108,7 @@ catch (Exception e)
     Environment.Exit(-1);
 }
 
+// -----------------------
 // Publish
 Console.WriteLine("Publishing a QoS level 2 message...");
 
@@ -120,7 +123,30 @@ var result = await client.PublishAsync("tests/MostBasicPublishWithQoS2Async", ms
 
 Console.WriteLine(result);
 
+// -----------------------
+//// Publish 2
+//Console.WriteLine("Publishing message...");
+////initialise telemetry values
+//double temperature = 25.1;
+//double humidity = 77.5;
+//var rand = new Random();
 
+//while (true)
+//{
+//    double currentTemperature = temperature + rand.NextDouble();
+//    double currentHumidity = humidity + rand.NextDouble();
+//    var msg = JsonSerializer.Serialize(
+//        new
+//        {
+//            temperature = currentTemperature,
+//            humidity = currentHumidity,
+//        });
+//    //Publish MQTT messages
+//    var result = await client.PublishAsync("hivemqdemo/telemetry", msg, QualityOfService.AtLeastOnceDelivery).ConfigureAwait(false);
+
+//}
+
+// -----------------------
 // Subscribe
 //client.OnMessageReceived += (sender, args) =>
 //{
@@ -130,11 +156,11 @@ Console.WriteLine(result);
 
 //client.SubscribeAsync("core/dg/entity/227489").ConfigureAwait(false);
 
-
+// -----------------------
 // Unsubscribe
 //client.UnsubscribeAsync("core/dynamic_graph/entity/227489");
 
-
+// -----------------------
 // Disconnect
 Console.WriteLine("Disconnecting from broker...");
 var disconnectResult = await client.DisconnectAsync().ConfigureAwait(false);
