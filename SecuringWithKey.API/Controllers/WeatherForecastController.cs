@@ -1,3 +1,4 @@
+using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -26,7 +27,7 @@ namespace SecuringWithKey.API.Controllers
 
             //throw new Exception("Failed to retrieve data");
 
-            var response = Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            var response = Enumerable.Range(1, 5).Select(index => new WeatherForecast 
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = Random.Shared.Next(-20, 55),

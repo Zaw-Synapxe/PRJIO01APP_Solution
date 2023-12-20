@@ -1,7 +1,15 @@
+using FluentEmailImp.WebApp.Helper;
+using FluentEmailImp.WebApp.Service;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
+builder.Services.AddFluentEmail(builder.Configuration);
+builder.Services.AddScoped<IEmailService, EmailService>();
+
 
 var app = builder.Build();
 
