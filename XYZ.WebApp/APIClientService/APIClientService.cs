@@ -16,6 +16,9 @@ namespace XYZ.WebApp.APIClientService
             { RequestFormat = DataFormat.Json };
 
             var response = await _RestClient.ExecuteAsync<List<T>>(_RestRequest);
+            
+            if (response.Data == null)
+                throw new Exception(response.ErrorMessage);
             return response.Data;
         }
         public async Task<T> GetById(Int64 Id, string subURL)
@@ -24,6 +27,9 @@ namespace XYZ.WebApp.APIClientService
             { RequestFormat = DataFormat.Json };
 
             var response = await _RestClient.ExecuteAsync<T>(_RestRequest);
+
+            if (response.Data == null)
+                throw new Exception(response.ErrorMessage);
             return response.Data;
         }
 

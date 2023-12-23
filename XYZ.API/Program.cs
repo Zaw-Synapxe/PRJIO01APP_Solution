@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using NLog.Web;
 using XYZ.API.Data;
 using XYZ.API.Service;
 
@@ -15,6 +16,7 @@ builder.Services.AddScoped<ApplicationDbContext>();
 string connString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connString));
 
+//
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 builder.Services.AddCors(options =>
@@ -24,6 +26,11 @@ builder.Services.AddCors(options =>
         .AllowAnyHeader()
         .AllowAnyMethod());
 });
+
+//
+builder.Logging.ClearProviders();
+builder.Logging.SetMinimumLevel(LogLevel.Trace);
+builder.Host.UseNLog();
 
 var app = builder.Build();
 

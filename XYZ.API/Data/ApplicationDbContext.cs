@@ -17,5 +17,13 @@ namespace XYZ.API.Data
         public DbSet<PersonalInfo> tbl_PersonalInfo => Set<PersonalInfo>();
 
         //
+        public DbSet<Branch> tbl_Branch { get; set; }
+        public DbSet<Department> tbl_Department { get; set; }
+
+        public DbSet<Category> tbl_Category { get; set; }
+
+
+
+        //
     }
 }

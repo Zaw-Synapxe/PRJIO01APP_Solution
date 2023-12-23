@@ -42,5 +42,52 @@ namespace XYZ.API.Data
             }
             return new string(chars);
         }
+
+
+        //
+        public IEnumerable<Branch> GetBranchList()
+        {
+            return new List<Branch>
+            {
+                new Branch { Name = "Autumn", Description = "TBD", },
+                new Branch { Name = "Spring", Description = "TBD", },
+                new Branch { Name = "Winter", Description = "TBD", },
+                new Branch { Name = "Test Branch", Description = "TBD", },
+            };
+        }
+        public IEnumerable<Department> GetDepartmentList()
+        {
+            return new List<Department>
+            {
+                new Department { Name = "CSE", Description = "TBD", },
+                new Department { Name = "EEE", Description = "TBD", },
+                new Department { Name = "ECE", Description = "TBD", },
+                new Department { Name = "Test Department", Description = "TBD", },
+            };
+        }
+
+        //
+        public IEnumerable<Category> GetCategoryList()
+        {
+            return new List<Category>
+            {
+                new Category { Name = "Item Category 01", Description = "Description of your category item: lorem ipsum" },
+                new Category { Name = "Item Category 02", Description = "Description of your category item: lorem ipsum" },
+                new Category { Name = "Item Category 03", Description = "Description of your category item: lorem ipsum" },
+                new Category { Name = "Item Category 04", Description = "Description of your category item: lorem ipsum" },
+                new Category { Name = "Item Category 05", Description = "Description of your category item: lorem ipsum" },
+
+                new Category { Name = "Item Category 06", Description = "Description of your category item: lorem ipsum" },
+                new Category { Name = "Item Category 07", Description = "Description of your category item: lorem ipsum" },
+                new Category { Name = "Item Category 08", Description = "Description of your category item: lorem ipsum" },
+                new Category { Name = "Item Category 09", Description = "Description of your category item: lorem ipsum" },
+                new Category { Name = "Item Category 10", Description = "Description of your category item: lorem ipsum" },
+
+                new Category { Name = "Item Category 11", Description = "Description of your category item: lorem ipsum" },
+                new Category { Name = "Item Category 12", Description = "Description of your category item: lorem ipsum" },
+            };
+        }
+
+        //
     }
 }

@@ -21,6 +21,7 @@ namespace XYZ.API.Controllers
         {
             return Ok(await _personalInfoRepository.GetAllAsync());
         }
+
         [HttpGet]
         [Route("GetBy/{id}")]
         public async Task<ActionResult<PersonalInfo>> GetBy(Int64 id)
@@ -32,13 +33,13 @@ namespace XYZ.API.Controllers
             }
             return Ok(result);
         }
+
         [HttpGet]
         [Route("GetByName/{PersonalInfoName}")]
         public async Task<ActionResult<PersonalInfo>> GetByName(string PersonalInfoName)
         {
             return Ok(await _personalInfoRepository.FindByConditionAsync(x => x.FirstName.Contains(PersonalInfoName)));
         }
-
 
         [HttpPost]
         [Route("Add")]
@@ -47,6 +48,7 @@ namespace XYZ.API.Controllers
             _personalInfoRepository.Add(PersonalInfo);
             return Ok(await _personalInfoRepository.SaveChangesAsync());
         }
+
         [HttpPut]
         [Route("Update")]
         public async Task<IActionResult> Update([FromBody] PersonalInfo PersonalInfo)
@@ -54,8 +56,9 @@ namespace XYZ.API.Controllers
             _personalInfoRepository.Update(PersonalInfo);
             return Ok(await _personalInfoRepository.SaveChangesAsync());
         }
+
         [HttpDelete]
-        [Route("Delete")]
+        [Route("Delete/{id}")]
         public async Task<IActionResult> Delete(Int64 id)
         {
             await _personalInfoRepository.Delete(id);
