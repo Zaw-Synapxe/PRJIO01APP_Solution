@@ -15,11 +15,13 @@ namespace XYZ.WebApp.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Requesting to Home...");
             return View();
         }
 
         public IActionResult Privacy()
         {
+            _logger.LogInformation("Requesting to Privacy...");
             return View();
         }
 
