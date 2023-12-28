@@ -20,7 +20,7 @@ var DeleteDepartment = function (id) {
                     Swal.fire({
                         title: message,
                         icon: 'info',
-                        onAfterClose: () => {
+                        didClose: () => {
                             //location.reload();
                             window.location.href = document.location.origin + "/Department";
                         }
