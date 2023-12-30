@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Serialization;
 using Serilog;
 using XYZ.WebApp.APIClientService;
 
@@ -11,6 +12,11 @@ builder.Host.UseSerilog((context, configuration) =>
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped(typeof(IAPIClientService<>), typeof(APIClientService<>));
+
+builder.Services.AddControllers().AddNewtonsoftJson(options =>
+{
+    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+});
 
 var app = builder.Build();
 
