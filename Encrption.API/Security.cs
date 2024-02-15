@@ -19,14 +19,23 @@ namespace Encrption.API
             if (string.IsNullOrEmpty(input) || input == "null")
                 return string.Empty;
 
-            using (var provider = new TripleDESCryptoServiceProvider())
+            try
             {
-                provider.Key = Encoding.ASCII.GetBytes(Key.Substring(0, 16));
-                provider.IV = Encoding.ASCII.GetBytes(Key.Substring(8, 8));
+                using (var provider = new TripleDESCryptoServiceProvider())
+                {
+                    provider.Key = Encoding.ASCII.GetBytes(Key.Substring(0, 16));
+                    provider.IV = Encoding.ASCII.GetBytes(Key.Substring(8, 8));
 
-                var encryptedBinary = EncryptTextMemory(input, provider.Key, provider.IV);
-                return Convert.ToBase64String(encryptedBinary);
+                    var encryptedBinary = EncryptTextMemory(input, provider.Key, provider.IV);
+                    return Convert.ToBase64String(encryptedBinary);
+                }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return "";
+            }
+
         }
 
         private byte[] EncryptTextMemory(string data, byte[] key, byte[] iv)
@@ -79,6 +88,9 @@ namespace Encrption.API
                 }
             }
         }
+        
+        
+        
         //
     }
 }

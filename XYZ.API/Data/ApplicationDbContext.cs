@@ -5,6 +5,12 @@ namespace XYZ.API.Data
 {
     public class ApplicationDbContext : DbContext
     {
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    //Configuring the Connection String
+        //    optionsBuilder.UseSqlServer(@"Server=LAPTOP-6P5NK25R\SQLSERVER2022DEV;Database=EFCoreDB;Trusted_Connection=True;TrustServerCertificate=True;");
+        //}
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
@@ -19,7 +25,6 @@ namespace XYZ.API.Data
         //
         public DbSet<Branch> tbl_Branch { get; set; }
         public DbSet<Department> tbl_Department { get; set; }
-
         public DbSet<Category> tbl_Category { get; set; }
 
 

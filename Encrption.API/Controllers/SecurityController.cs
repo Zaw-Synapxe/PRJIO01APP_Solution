@@ -16,12 +16,12 @@ namespace Encrption.API.Controllers
             serviceCollection.AddDataProtection();
             var lockerKey = serviceCollection.BuildServiceProvider();
 
-
             //create an instance of classfile using 'CreateInstance' method
             var locker = ActivatorUtilities.CreateInstance<Security>(lockerKey);
-            string encryptKey = locker.Encrypt(decrypted.Text);
+            
+            string encryptKey = locker.Encrypt(decrypted.Text != null ? decrypted.Text : "");
             string deencryptKey = locker.Decrypt(encryptKey);
-
+            
             return new string[] { encryptKey, deencryptKey };
         }
 
@@ -31,16 +31,16 @@ namespace Encrption.API.Controllers
             var serviceCollection = new ServiceCollection();
 
             //add protection service
-
             serviceCollection.AddDataProtection();
             var lockerKey = serviceCollection.BuildServiceProvider();
 
             //create an instance of classfile using 'CreateInstance' method
             var locker = ActivatorUtilities.CreateInstance<Security>(lockerKey);
-
-            string deencryptKey = locker.Decrypt(encrpted.Text);
+            string deencryptKey = locker.Decrypt(encrpted.Text != null ? encrpted.Text : "");
 
             return new string[] { deencryptKey };
         }
+
+        //
     }
 }
