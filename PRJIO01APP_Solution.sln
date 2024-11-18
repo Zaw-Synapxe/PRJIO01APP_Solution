@@ -190,11 +190,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.ConsoleApp", "Hang
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore.ConsoleApp", "EFCore.ConsoleApp\EFCore.ConsoleApp.csproj", "{E512A0B5-2603-4EE0-BAA8-367278129A11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTime.ConsoleApp", "ConsoleApp\DateTime.ConsoleApp\DateTime.ConsoleApp.csproj", "{18DC0D38-6D02-4B5A-8C9D-279326CE26AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTime.ConsoleApp", "ConsoleApp\DateTime.ConsoleApp\DateTime.ConsoleApp.csproj", "{18DC0D38-6D02-4B5A-8C9D-279326CE26AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawSQLQuery.ConsoleApp", "ConsoleApp\RawSQLQuery.ConsoleApp\RawSQLQuery.ConsoleApp.csproj", "{67C4DBD3-A7E1-450F-80EF-5A74C213F6F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RawSQLQuery.ConsoleApp", "ConsoleApp\RawSQLQuery.ConsoleApp\RawSQLQuery.ConsoleApp.csproj", "{67C4DBD3-A7E1-450F-80EF-5A74C213F6F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums.ConsoleApp", "ConsoleApp\Enums.ConsoleApp\Enums.ConsoleApp.csproj", "{D96E1E95-5AD4-4B25-863B-0EC9FD612D88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enums.ConsoleApp", "ConsoleApp\Enums.ConsoleApp\Enums.ConsoleApp.csproj", "{D96E1E95-5AD4-4B25-863B-0EC9FD612D88}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLServer1.ConsoleApp", "ConsoleApp\SQLServer1.ConsoleApp\SQLServer1.ConsoleApp.csproj", "{C510F002-D041-4156-9544-D5D363A0BD56}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SQLServer2.ConsoleApp", "ConsoleApp\SQLServer2.ConsoleApp\SQLServer2.ConsoleApp.csproj", "{BAFBC256-1E81-4513-BAE2-06BDFB33DF38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonNodeXYZ.ConsoleApp", "ConsoleApp\JsonNode.ConsoleApp\JsonNodeXYZ.ConsoleApp.csproj", "{540FD69B-6BD7-47A5-A3AF-02232F80C3CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -494,6 +500,18 @@ Global
 		{D96E1E95-5AD4-4B25-863B-0EC9FD612D88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D96E1E95-5AD4-4B25-863B-0EC9FD612D88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D96E1E95-5AD4-4B25-863B-0EC9FD612D88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C510F002-D041-4156-9544-D5D363A0BD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C510F002-D041-4156-9544-D5D363A0BD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C510F002-D041-4156-9544-D5D363A0BD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C510F002-D041-4156-9544-D5D363A0BD56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAFBC256-1E81-4513-BAE2-06BDFB33DF38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAFBC256-1E81-4513-BAE2-06BDFB33DF38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAFBC256-1E81-4513-BAE2-06BDFB33DF38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAFBC256-1E81-4513-BAE2-06BDFB33DF38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540FD69B-6BD7-47A5-A3AF-02232F80C3CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540FD69B-6BD7-47A5-A3AF-02232F80C3CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540FD69B-6BD7-47A5-A3AF-02232F80C3CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540FD69B-6BD7-47A5-A3AF-02232F80C3CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -572,6 +590,9 @@ Global
 		{18DC0D38-6D02-4B5A-8C9D-279326CE26AE} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 		{67C4DBD3-A7E1-450F-80EF-5A74C213F6F7} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 		{D96E1E95-5AD4-4B25-863B-0EC9FD612D88} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{C510F002-D041-4156-9544-D5D363A0BD56} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{BAFBC256-1E81-4513-BAE2-06BDFB33DF38} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
+		{540FD69B-6BD7-47A5-A3AF-02232F80C3CD} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}
