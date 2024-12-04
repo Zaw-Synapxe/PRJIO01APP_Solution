@@ -10,7 +10,11 @@
     <PackageReference Include="Hangfire" Version="1.7.35" />
     <PackageReference Include="Hangfire.SqlServer" Version="1.7.35" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="6.0.16" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
   </ItemGroup>
 
 </Project>
