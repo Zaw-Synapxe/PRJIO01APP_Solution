@@ -1,0 +1,24 @@
+One-to-One
+User and Profile (One User have One Profile (profile can be null))
+
+One-to-Many
+Blog and Post (One Blog have multiple Post)
+
+Many-to-Many
+Student and Courses (One Student have multiple Cources and One Course have multiple Student)
+
+
+
+-- ---------------------
+using cmd for migration
+
+Inside Project folder EFCoreRelationships.API.csproj
+
+dotnet tool install --global dotnet-ef
+
+dotnet ef migrations add OneToOne
+
+dotnet ef database update
+
+
+dotnet ef migrations script

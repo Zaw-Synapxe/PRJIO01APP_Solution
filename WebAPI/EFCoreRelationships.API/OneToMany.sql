@@ -1,0 +1,22 @@
+
+
+BEGIN TRANSACTION;
+
+CREATE TABLE "Blogs" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Blogs" PRIMARY KEY AUTOINCREMENT,
+    "Title" TEXT NULL
+);
+
+CREATE TABLE "Posts" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Posts" PRIMARY KEY AUTOINCREMENT,
+    "Content" TEXT NULL,
+    "BlogId" INTEGER NOT NULL,
+    CONSTRAINT "FK_Posts_Blogs_BlogId" FOREIGN KEY ("BlogId") REFERENCES "Blogs" ("Id") ON DELETE CASCADE
+);
+
+CREATE INDEX "IX_Posts_BlogId" ON "Posts" ("BlogId");
+
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241212181653_OneToMany', '8.0.11');
+
+COMMIT;
