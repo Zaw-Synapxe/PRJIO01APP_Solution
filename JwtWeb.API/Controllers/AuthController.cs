@@ -19,8 +19,8 @@ namespace JwtWeb.API.Controllers
         private readonly IConfiguration _config;
         private List<User> _users = new List<User>
         {
-            new User{ UserName = "Admin", Password="Password"},
-            new User{UserName="defaultuser", Password = "def@123"}
+            new User{ UserName = "Admin", Password = "password"},
+            new User{ UserName = "defaultuser", Password = "def@123"}
         };
 
         public AuthController(IConfiguration config)
