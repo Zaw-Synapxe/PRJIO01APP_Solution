@@ -1,0 +1,12 @@
+
+// https://www.c-sharpcorner.com/article/jwt-token-authentication-using-the-net-core-6-web-api/
+
+
+// another example at
+// https://medium.com/@meghnav274/simple-jwt-authentication-using-asp-net-core-api-5d04b496d27b
+
+// other Ref
+// https://www.youtube.com/watch?v=UwruwHl3BlU
+
+ASP.NET Core Authentication with Identity: JWT, Refresh Tokens, Access Tokens, and More
+//https://www.youtube.com/watch?v=bjqIAgABRrg

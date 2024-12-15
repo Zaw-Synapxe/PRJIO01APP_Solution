@@ -206,6 +206,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weather.API", "WebAPI\Weath
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreRelationships.API", "WebAPI\EFCoreRelationships.API\EFCoreRelationships.API.csproj", "{ABA7468B-0898-47B9-BEC7-C09865E43441}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashingPassword.API", "WebAPI\HashingPassword.API\HashingPassword.API.csproj", "{0F07795C-6C76-4857-BE28-FDA9392FE33D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -524,6 +526,10 @@ Global
 		{ABA7468B-0898-47B9-BEC7-C09865E43441}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABA7468B-0898-47B9-BEC7-C09865E43441}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABA7468B-0898-47B9-BEC7-C09865E43441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F07795C-6C76-4857-BE28-FDA9392FE33D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F07795C-6C76-4857-BE28-FDA9392FE33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F07795C-6C76-4857-BE28-FDA9392FE33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F07795C-6C76-4857-BE28-FDA9392FE33D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -607,6 +613,7 @@ Global
 		{540FD69B-6BD7-47A5-A3AF-02232F80C3CD} = {11256E00-B7DF-4D94-868B-75D1B327D6A0}
 		{8238FD36-5ECB-4EDA-85CC-DEAA4B47BCE0} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
 		{ABA7468B-0898-47B9-BEC7-C09865E43441} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
+		{0F07795C-6C76-4857-BE28-FDA9392FE33D} = {E13CB618-B06E-41AC-8898-EA85EF7AF93A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B4539FBF-9060-4722-8A95-C18CD85382C1}

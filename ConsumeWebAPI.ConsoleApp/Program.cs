@@ -22,3 +22,32 @@ using (var client = new HttpClient())
     Console.WriteLine(post.ToString());
 }
 
+
+
+// -------------------------------------------
+var apiUrl = "https://localhost:44316/WeatherForecast"; // Example API endpoint
+
+using var client2 = new HttpClient();
+
+try
+{
+    // Making the GET request
+    var response = await client2.GetAsync(apiUrl);
+
+    // Ensure the request was successful
+    response.EnsureSuccessStatusCode();
+
+    // Read the response content as a string
+    var content = await response.Content.ReadAsStringAsync();
+
+    Console.WriteLine(content);
+
+    Console.ReadKey();
+
+}
+catch (HttpRequestException e)
+{
+    Console.WriteLine($"Request error: {e.Message}");
+}
+
+// -------------------------------------------
