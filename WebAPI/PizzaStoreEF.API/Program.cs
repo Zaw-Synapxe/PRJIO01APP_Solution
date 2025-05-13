@@ -26,6 +26,8 @@ app.UseSwaggerUI(c =>
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "PizzaStore EF API v1");
 });
 
+app.MapGet("/", () => "Hello World!");
+
 app.MapPost("/pizzas", async (PizzaDb db, Pizza pizza) =>
 {
     await db.Pizzas.AddAsync(pizza);
@@ -35,7 +37,6 @@ app.MapPost("/pizzas", async (PizzaDb db, Pizza pizza) =>
 
 app.MapGet("/pizzas", async (PizzaDb db) => await db.Pizzas.ToListAsync());
 app.MapGet("/pizza/{id}", async (PizzaDb db, int id) => await db.Pizzas.FindAsync(id));
-app.MapGet("/", () => "Hello World!");
 
 app.MapPut("/pizza/{id}", async (PizzaDb db, Pizza updatePizza, int id) =>
 {
