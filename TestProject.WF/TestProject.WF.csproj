@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Auth.API\Auth.API.csproj" />
+    <ProjectReference Include="..\WebAPI\Auth.API\Auth.API.csproj" />
   </ItemGroup>
 
 </Project>

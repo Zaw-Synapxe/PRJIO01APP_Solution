@@ -15,8 +15,8 @@ using Log4Net.LogUtility;
 
 class Program
 {
-    private static IConfiguration? config2;
-    static async void Main(string[] args)
+    private static IConfiguration config2;
+    static async Task Main(string[] args) //static async void Main(string[] args)
     {
         // 0
         var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
@@ -104,7 +104,7 @@ class Program
             var scalar = db.Query<string>("SELECT GETDATE()").SingleOrDefault();
             //scalar.Dump("This is a string scalar result:");
 
-            var results = db.Query<myobject>(@"
+            var results = db.Query<MyObject>(@"
 		        SELECT * FROM (
 		        VALUES (1,'one'),
 			        (2,'two'),
@@ -286,9 +286,9 @@ class Program
 public class Employee
 {
     public int Id { get; set; }
-    public string? Name { get; set; }
+    public string Name { get; set; }
     public int Age { get; set; }
-    public string? Position { get; set; }
+    public string Position { get; set; }
     public int? CompanyId { get; set; }
 }
 
@@ -296,32 +296,32 @@ public class Employee
 public class Company
 {
     public int Id { get; set; }
-    public string? Name { get; set; }
-    public string? Address { get; set; }
-    public string? Country { get; set; }
-    public List<Employee>? Employees { get; set; } = new List<Employee>();
+    public string Name { get; set; }
+    public string Address { get; set; }
+    public string Country { get; set; }
+    public List<Employee> Employees { get; set; } = new List<Employee>();
 }
 
 // DTO
 public class CompanyForCreationDto
 {
-    public string? Name { get; set; }
-    public string? Address { get; set; }
-    public string? Country { get; set; }
+    public string Name { get; set; }
+    public string Address { get; set; }
+    public string Country { get; set; }
 }
 
 // DTO
 public class CompanyForUpdateDto
 {
-    public string? Name { get; set; }
-    public string? Address { get; set; }
-    public string? Country { get; set; }
+    public string Name { get; set; }
+    public string Address { get; set; }
+    public string Country { get; set; }
 }
 
 public class ServerConnection
 {
-    public string? Url { get; set; }
-    public string? Password { get; set; }
+    public string Url { get; set; }
+    public string Password { get; set; }
     public int Port { get; set; }
     public bool IsSSL { get; set; }
 
@@ -331,18 +331,18 @@ public class ServerConnection
     }
 }
 
-public class myobject
-{
-    public int id { get; set; }
-    public string? name { get; set; }
-}
 
 public class CompanyOptions
 {
-    public string? Code { get; set; }
-    public string? Name { get; set; }
-    public string? City { get; set; }
+    public string Code { get; set; }
+    public string Name { get; set; }
+    public string City { get; set; }
     public int EmployeeCount { get; set; }
+}
+public class MyObject
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
 }
 
 

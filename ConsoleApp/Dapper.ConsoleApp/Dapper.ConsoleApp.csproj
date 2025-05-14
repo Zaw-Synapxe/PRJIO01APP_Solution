@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Log4Net.LogUtility\Log4Net.LogUtility.csproj" />
+    <ProjectReference Include="..\..\Utility\Log4Net.LogUtility\Log4Net.LogUtility.csproj" />
   </ItemGroup>
 
   <ItemGroup>
