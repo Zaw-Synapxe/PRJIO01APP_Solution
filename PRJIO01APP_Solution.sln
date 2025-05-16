@@ -43,6 +43,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "XYZNotes", "XYZNotes", "{94
 		XYZNotes\tbl_Products.sql = XYZNotes\tbl_Products.sql
 		XYZNotes\UserAndAddress_DB.sql = XYZNotes\UserAndAddress_DB.sql
 		XYZNotes\usingDictionary.cs = XYZNotes\usingDictionary.cs
+		X_Links.txt = X_Links.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{4E51FF2C-12B5-4B43-B958-D146A9F7EF4E}"
