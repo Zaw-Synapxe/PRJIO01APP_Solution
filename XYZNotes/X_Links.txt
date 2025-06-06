@@ -10,3 +10,45 @@ https://github.com/KarateJB/Quartz.Net.Sample/tree/master/src/Quartz.Net.Sample
 
 
 Other Links
+
+Create an ASP.NET Core app with React in Visual Studio
+https://learn.microsoft.com/en-us/visualstudio/javascript/tutorial-asp-net-core-with-react?view=vs-2022
+
+How to Solve The type ‘TRequest’ Cannot be Used as Type Parameter in MediatR
+https://code-maze.com/type-trequest-cannot-be-used-in-mediatr/
+
+How to Implement JWT Authentication in Web API Using .Net 6.0, Asp.Net Core
+https://www.c-sharpcorner.com/article/how-to-implement-jwt-authentication-in-web-api-using-net-6-0-asp-net-core/
+
+
+Real-Time Web Chat in .NET: Leveraging SignalR and Dapper. Part-I
+https://medium.com/@hasanmcse/real-time-web-chat-in-net-leveraging-signalr-and-dapper-part-i-ab955f779660?sk=9b8ba25c7890585190ec457beb586eca
+https://github.com/hasanmonsur/Real-Time-Web-Chat-Server-in-.NET-
+https://github.com/hasanmonsur/Real-Time-Web-Chat-Client-in-.NET
+
+
+
+JWT Authentication in ASP.NET Core Web API
+https://dotnettutorials.net/lesson/jwt-authentication-in-asp-net-core-web-api/
+
+Refresh Token in ASP.NET Core Web API using JWT Authentication
+https://dotnettutorials.net/lesson/refresh-token-in-asp-net-core-web-api-using-jwt-authentication/
+
+
+
+
+
+*** Medium ***
+
+Session based Authorization in ASP.NET Core
+https://medium.com/@KumarHalder/session-based-authorization-in-asp-net-core-95eed1d3dded
+
+Session Based Authentication (Cookie)
+https://medium.com/@KumarHalder/session-based-authentication-cookie-06a5f84c4c6b
+
+Implementing .NET 8 Identity: Step-by-Step Registration, Login, and Email Confirmation
+https://medium.com/@hasanmcse/implementing-net-8-identity-step-by-step-registration-login-and-email-confirmation-13d1d95f3134
+
+
+
+
